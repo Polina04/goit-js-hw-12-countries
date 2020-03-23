@@ -4,6 +4,5 @@ export default function fetchCountries(searchQuery) {
   const requestParams = `${searchQuery}`;
   return fetch(baseUrl + requestParams)
     .then(response => response.json())
-
     .catch(err => console.log(err));
 }

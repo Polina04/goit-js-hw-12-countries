@@ -11,7 +11,7 @@ const refs = {
   countryContainer: document.querySelector('.js-country'),
 };
 
-refs.searchInput.addEventListener('input', debounce(inputCountryName, 500));
+refs.searchInput.addEventListener('input', debounce(inputCountryName, 800));
 
 function inputCountryName(e) {
   e.preventDefault();

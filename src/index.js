@@ -32,13 +32,18 @@ function renderCountryList(arr) {
     refs.countryUl.innerHTML = '';
     const markUpCountryInfo = countryInfoTemplate(arr);
     refs.countryContainer.insertAdjacentHTML('beforeend', markUpCountryInfo);
-  } else if (arr.length >= 2 && arr.length <= 10) {
+    return;
+  }
+  if (arr.length >= 2 && arr.length <= 10) {
     refs.countryContainer.innerHTML = '';
     const markUpList = countryListTemplate(arr);
     refs.countryUl.insertAdjacentHTML('beforeend', markUpList);
-  } else if (arr.length > 10) {
+    return;
+  }
+  if (arr.length > 10) {
     PNotify.alert(
       'Too many matches found. Please enter a more specific query!',
     );
+    return;
   }
 }

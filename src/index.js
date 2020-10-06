@@ -40,6 +40,15 @@ function renderCountryList(arr) {
     refs.countryContainer.innerHTML = '';
     const markUpList = countryListTemplate(arr);
     refs.countryUl.insertAdjacentHTML('beforeend', markUpList);
+    const items = document.querySelectorAll('[data-list-item');
+
+    items.forEach(item => {
+      item.addEventListener('click', e => {
+        fetchCountries(e.target.textContent).then(data => {
+          renderCountryList(data);
+        });
+      });
+    });
     return;
   }
   if (arr.length > 10) {

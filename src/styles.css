@@ -1,13 +1,17 @@
 html {
   box-sizing: border-box;
-  font-size: 24px;
+  font-size: 22px;
 }
-ul.country-list {
-  padding-left: 0;
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  list-style-type: circle;
 }
-*,
-*::before,
-*::after {
+img {
+  width: 100%;
+}
+* {
   box-sizing: inherit;
 }
 
@@ -15,6 +19,16 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0;
+}
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: url('./images/hotpng.com.png');
+  background-repeat: no-repeat;
+  background-position: bottom 20px right 20px;
+  background-size: 200px 200px;
 }
 .container {
   text-align: center;
@@ -24,26 +38,31 @@ body {
   justify-content: flex-start;
 }
 
-input {
+.container > input {
   width: 40%;
   height: 40px;
-  font-size: 24px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 .country-container {
   width: 40%;
 }
-ul {
-  text-align: left;
+.country-card {
+  border: 3px solid rgb(180, 49, 49);
+  border-radius: 2px;
+  padding: 7px;
 }
-
-span {
-  display: block;
+.country-card > p {
+  margin: 0;
   text-align: left;
 }
 .fatty {
   display: inline;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 24px;
 }
-img {
-  width: 100%;
+
+.lang-list {
+  padding-left: 40px;
+  margin-bottom: 10px;
 }

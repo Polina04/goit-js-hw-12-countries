@@ -1,14 +1,16 @@
 {{#each this}}
-<h1>{{name}}</h1>
+<div class="country-card">
+    <h1>{{name}}</h1>
 
-<span><span class="fatty">Capital:</span> {{capital}}</span>
-<span><span class="fatty">Population:</span> {{population}}</span>
-<span><span class="fatty">Languages:</span></span>
-<ul class="lang-list">
-    {{#each languages}}
-    <li>{{name}}</li>
-    {{/each}}
-</ul>
+    <p><span class="fatty">Capital:</span> {{capital}}</p>
+    <p><span class="fatty">Population:</span> {{population}}</p>
+    <p><span class="fatty">Languages:</span></p>
+    <ul class="lang-list">
+        {{#each languages}}
+        <li>{{name}}</li>
+        {{/each}}
+    </ul>
 
-<img src={{flag}} alt="flag">
+    <img src={{flag}} alt="flag">
+</div>
 {{/each}}

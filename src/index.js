@@ -6,9 +6,9 @@ import countryInfoTemplate from './template/country.hbs';
 import PNotify from 'pnotify/dist/es/PNotify.js';
 
 const refs = {
-  searchInput: document.querySelector('.js-input'),
-  countryUl: document.querySelector('.js-list'),
-  countryContainer: document.querySelector('.js-country'),
+  searchInput: document.querySelector('[data-input]'),
+  countryUl: document.querySelector('[data-country-list]'),
+  countryContainer: document.querySelector('[data-country]'),
 };
 
 refs.searchInput.addEventListener('input', debounce(inputCountryName, 800));
@@ -27,10 +27,12 @@ function inputCountryName(e) {
     renderCountryList(data);
   });
 }
+
 function renderCountryList(arr) {
   if (arr.length === 1) {
     refs.countryUl.innerHTML = '';
     const markUpCountryInfo = countryInfoTemplate(arr);
+
     refs.countryContainer.insertAdjacentHTML('beforeend', markUpCountryInfo);
     return;
   }
